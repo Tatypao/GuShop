@@ -164,11 +164,12 @@ img {
     display: none;
 }
 
+
 button:hover {
     animation: shake .3s linear 1;
 }
 @keyframes shake {
-    0% {
+    0% { 
         transform: translateX(0px);
     }
     25% {
@@ -247,12 +248,52 @@ button:hover {
         padding: 10px 8px;
         display: block;
     }
-    .menu {
+    .menu span {
         width: 40px;
-        height: 50px;
-        border: solid 1px var(--mg-color-text);
+        height: 5px;
         display: inline-block;
+        background-color: var(--mg-color-text);
     }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    .menu 
+    /*.menu {
+        width: 40px;
+        height: 5px;
+        display: inline-block;
+        background-color: var(--mg-color-text);
+        position: relative;
+    }
+    .menu:hover {
+        background-color: transparent;
+    }
+    .menu::before, .menu::after {
+        width: 40px;
+        height: 5px;
+        display: inline-block;
+        background-color: var(--mg-color-text);
+        position: absolute;
+        content: '';
+        left: 0px;
+        transition: all .4s linear;
+    }
+    .menu::before {
+        top: -10px;
+    }
+    .menu::after {
+        bottom: -10px;
+    }
+    .menu:hover::after{
+        bottom: 0px;
+        transform: rotateZ(45deg);
+    }
+    .menu:hover::before{
+        top: 0px;
+        transform: rotateZ(130deg);
+    }*/
     .lista-1 li {
         display: none;
     }
@@ -260,3 +301,4 @@ button:hover {
         display: block;
     }
 }
+       
