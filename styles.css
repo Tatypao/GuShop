@@ -147,6 +147,7 @@ img {
     border: solid 1px  rgb(231, 185, 190);
     border-radius: 3px;
     box-shadow: 3px 2px 3px var(--mg-color-text);
+    cursor: pointer;
 }
 .footer {
     margin: 30px 0px;
@@ -252,14 +253,33 @@ button:hover {
         width: 40px;
         height: 5px;
         display: inline-block;
-        background-color: var(--mg-color-text);
+       background-color: var(--mg-color-text);
+       transition: all .1s linear;
     }
     .menu {
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: 7px; 
+        position: relative;
+        transition: all .4s linear;
+        width: 40px;
+        height: 29px;
+        cursor: pointer;
     }
-    .menu 
+    .menu:hover span:nth-child(3){
+        position: absolute;
+        bottom: 12px;
+        transform: rotateZ(45deg);
+    }
+    .menu:hover span:first-child{
+       position: absolute;
+       top: 12px;
+       transform: rotateZ(130deg);
+    }
+    .menu:hover span:nth-child(2){
+        background-color: transparent;
+    }
+
     /*.menu {
         width: 40px;
         height: 5px;
